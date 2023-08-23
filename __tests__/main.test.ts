@@ -1,12 +1,6 @@
-import {wait} from '../src/wait'
 import {expect, test, describe,jest} from '@jest/globals'
 import { setOutput } from '@actions/core'
 import {run} from '../src/main'
-
-test('throws invalid number', async () => {
-  const input = parseInt('foo', 10)
-  await expect(wait(input)).rejects.toThrow('milliseconds not a number')
-})
 
 jest.mock('@actions/core')
 
