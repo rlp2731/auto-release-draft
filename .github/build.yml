@@ -3,17 +3,17 @@ on: push
  branches:
    - main
   
-job:
+jobs:
   build:
-  name: Build and Test
-  runs-on: ${{matrix.os}}
-  strategy:
-    matrix:
-      os: [windows-latest, ubuntu-latest]
-  steps:
-    - name: Get the Sources
-      uses: actions/checkout@v1
-    - name: Restore the dependencies
-      run: npm ci
-    - name: Build
-      run: npm run all
+    name: Build and Test
+    runs-on: ${{matrix.os}}
+    strategy:
+      matrix:
+        os: [windows-latest, ubuntu-latest]
+    steps:
+      - name: Get the Sources
+        uses: actions/checkout@v1
+      - name: Restore the dependencies
+        run: npm ci
+      - name: Build
+        run: npm run all
