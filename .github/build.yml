@@ -16,6 +16,4 @@ jobs:
       - name: Restore the dependencies
         run: npm ci
       - name: Build
-        run: npm build
-      - name: Unit Tes
-        run: npm test
+        run: npm run all
