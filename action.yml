@@ -1,6 +1,10 @@
 name: 'Auto Release Draft'
 description: 'Drafts a Github Release with changes introduced by a new version tag'
 author: 'Robert Pratte'
+inputs:
+  repo-token:
+    description: 'The GITHUB_TOKEN used to authenticate the current repo.'
+    required: true
 outputs:
   release-url:
     description: 'The URL of the Github release that was drafted'
